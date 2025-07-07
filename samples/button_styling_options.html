@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Styling Options</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        /* Base button styles */
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* Option 1: Solid colored buttons with border */
+        .btn-solid-primary {
+            background: #764ba2;
+            color: white;
+            border: 2px solid #764ba2;
+        }
+
+        .btn-solid-primary:hover {
+            background: #5a3783;
+            border-color: #5a3783;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+        }
+
+        .btn-solid-secondary {
+            background: #667eea;
+            color: white;
+            border: 2px solid #667eea;
+        }
+
+        .btn-solid-secondary:hover {
+            background: #4c63d2;
+            border-color: #4c63d2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Option 2: Outlined buttons */
+        .btn-outline-primary {
+            background: transparent;
+            color: #764ba2;
+            border: 2px solid #764ba2;
+        }
+
+        .btn-outline-primary:hover {
+            background: #764ba2;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(118, 75, 162, 0.3);
+        }
+
+        .btn-outline-secondary {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-outline-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Option 3: Gradient buttons */
+        .btn-gradient-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .btn-gradient-primary:hover {
+            background: linear-gradient(135deg, #5a66d1 0%, #5a3783 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-gradient-secondary {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+            color: white;
+            border: 2px solid transparent;
+        }
+
+        .btn-gradient-secondary:hover {
+            background: linear-gradient(135deg, #5a3783 0%, #5a66d1 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(118, 75, 162, 0.4);
+        }
+
+        /* Option 4: Shadow buttons */
+        .btn-shadow-primary {
+            background: white;
+            color: #764ba2;
+            border: 2px solid #764ba2;
+            box-shadow: 0 4px 15px rgba(118, 75, 162, 0.2);
+        }
+
+        .btn-shadow-primary:hover {
+            background: #764ba2;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(118, 75, 162, 0.3);
+        }
+
+        .btn-shadow-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .btn-shadow-secondary:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Option 5: Modern glass effect */
+        .btn-glass-primary {
+            background: rgba(118, 75, 162, 0.1);
+            color: #764ba2;
+            border: 2px solid rgba(118, 75, 162, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-glass-primary:hover {
+            background: rgba(118, 75, 162, 0.2);
+            border-color: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
+        }
+
+        .btn-glass-secondary {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-glass-secondary:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        /* Option 6: 3D Effect buttons */
+        .btn-3d-primary {
+            background: #764ba2;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #5a3783;
+        }
+
+        .btn-3d-primary:hover {
+            background: #5a3783;
+            border-bottom-color: #4a2d6b;
+            transform: translateY(-1px);
+        }
+
+        .btn-3d-primary:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .btn-3d-secondary {
+            background: #667eea;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #4c63d2;
+        }
+
+        .btn-3d-secondary:hover {
+            background: #4c63d2;
+            border-bottom-color: #3d4fb8;
+            transform: translateY(-1px);
+        }
+
+        .btn-3d-secondary:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .hero-demo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .hero-demo h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-demo p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #764ba2; font-size: 2.5rem; margin-bottom: 2rem;">Button Styling Options</h1>
+
+        <div class="section">
+            <h2>Option 1: Solid Colored Buttons with Border</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-solid-primary">View My Work</a>
+                <a href="#" class="btn btn-solid-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-solid-primary {
+    background: #764ba2;
+    color: white;
+    border: 2px solid #764ba2;
+}
+
+.btn-solid-primary:hover {
+    background: #5a3783;
+    border-color: #5a3783;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+}
+
+.btn-solid-secondary {
+    background: #667eea;
+    color: white;
+    border: 2px solid #667eea;
+}
+
+.btn-solid-secondary:hover {
+    background: #4c63d2;
+    border-color: #4c63d2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Option 2: Outlined Buttons (Recommended)</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-outline-primary">View My Work</a>
+                <a href="#" class="btn btn-outline-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-outline-primary {
+    background: transparent;
+    color: #764ba2;
+    border: 2px solid #764ba2;
+}
+
+.btn-outline-primary:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(118, 75, 162, 0.3);
+}
+
+.btn-outline-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-outline-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Option 3: Gradient Buttons</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-gradient-primary">View My Work</a>
+                <a href="#" class="btn btn-gradient-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-gradient-primary:hover {
+    background: linear-gradient(135deg, #5a66d1 0%, #5a3783 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Option 4: Shadow Buttons</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-shadow-primary">View My Work</a>
+                <a href="#" class="btn btn-shadow-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-shadow-primary {
+    background: white;
+    color: #764ba2;
+    border: 2px solid #764ba2;
+    box-shadow: 0 4px 15px rgba(118, 75, 162, 0.2);
+}
+
+.btn-shadow-primary:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(118, 75, 162, 0.3);
+}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Option 5: Modern Glass Effect</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-glass-primary">View My Work</a>
+                <a href="#" class="btn btn-glass-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-glass-primary {
+    background: rgba(118, 75, 162, 0.1);
+    color: #764ba2;
+    border: 2px solid rgba(118, 75, 162, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-glass-primary:hover {
+    background: rgba(118, 75, 162, 0.2);
+    border-color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.2);
+}
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Option 6: 3D Effect Buttons</h2>
+            <div class="button-group">
+                <a href="#" class="btn btn-3d-primary">View My Work</a>
+                <a href="#" class="btn btn-3d-secondary">Get In Touch</a>
+            </div>
+            <div class="code-block">
+/* CSS */
+.btn-3d-primary {
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-bottom: 4px solid #5a3783;
+}
+
+.btn-3d-primary:hover {
+    background: #5a3783;
+    border-bottom-color: #4a2d6b;
+    transform: translateY(-1px);
+}
+
+.btn-3d-primary:active {
+    transform: translateY(2px);
+    border-bottom-width: 2px;
+}
+            </div>
+        </div>
+
+        <div class="hero-demo">
+            <h1>How They Look on Your Hero Section</h1>
+            <p>Here's how the outlined buttons would look on your gradient background:</p>
+            <div class="button-group" style="justify-content: center;">
+                <a href="#" class="btn btn-outline-primary" style="background: rgba(255,255,255,0.1); color: white; border-color: white;">View My Work</a>
+                <a href="#" class="btn btn-outline-secondary" style="background: rgba(255,255,255,0.1); color: white; border-color: white;">Get In Touch</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Quick Fix for Your Current Portfolio</h2>
+            <p>Replace your current button CSS with this:</p>
+            <div class="code-block">
+/* Replace your .btn-primary and .btn-secondary with these */
+.btn-primary {
+    background: #764ba2;
+    color: white;
+    border: 2px solid #764ba2;
+}
+
+.btn-primary:hover {
+    background: #5a3783;
+    border-color: #5a3783;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
