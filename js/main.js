@@ -1,21 +1,36 @@
 // main.js
 
-// Mobile menu toggle
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
+// Mobile menu functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  const overlay = document.createElement('div');
+  overlay.className = 'menu-overlay';
+  document.body.appendChild(overlay);
 
-if (mobileMenuBtn && navLinks) {
-  mobileMenuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
-  
-  // Close menu when clicking a link
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      overlay.classList.toggle('active');
+      menuBtn.innerHTML = navLinks.classList.contains('active') ? '✕' : '☰';
     });
-  });
-}
+
+    overlay.addEventListener('click', function() {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      menuBtn.innerHTML = '☰';
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        menuBtn.innerHTML = '☰';
+      });
+    });
+  }
+});
 
 
 // Smooth scrolling with offset
