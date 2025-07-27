@@ -22,11 +22,11 @@ module.exports = async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+      from: `"MyPortfolio Contact" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
-      subject: `Portfolio message: ${subject}`,
+      subject: `MyPortfolio Message: ${subject}`,
       html: `
-        <h2>New Contact Form Submission</h2>
+        <h2>MyPortfolio Contact Form Submission</h2>
         <p><strong>From:</strong> ${name} (${email})</p>
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>

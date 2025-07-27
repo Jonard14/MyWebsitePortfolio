@@ -172,6 +172,60 @@ section {
     color: var(--text-light);
 }
 
+/* Project Links Container */
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Base Link Styles */
+.project-link, .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Website Link */
+.project-link {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.project-link:hover {
+    background-color: var(--primary-dark);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* GitHub Icon Button */
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.icon-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Certifications Section */
 .certifications {
     background: var(--bg-light);

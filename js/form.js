@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Vercel API endpoint for sending email
         const response = await fetch('/api/sendEmail.js', {
-        //const response = await fetch('http://localhost:3000/api/sendEmail', {
+        //const response = await fetch('http://localhost:3000/api/sendEmail.js', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
