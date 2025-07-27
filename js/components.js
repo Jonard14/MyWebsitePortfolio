@@ -63,8 +63,6 @@ class SiteNav extends HTMLElement {
     }
 }
 
-customElements.define('site-nav', SiteNav);
-
 class SiteFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
