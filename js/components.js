@@ -12,7 +12,8 @@ class SiteNav extends HTMLElement {
             </div>
             <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
             <ul class="nav-links">
-                <li><a href="index.html" ${this.isActive('index.html', currentPage)}>Home</a></li>
+                <li><a href="${isIndexPage ? '#home' : 'index.html#home'}" 
+                    ${this.isSectionActive('home')}}>Home</a></li>
                 <li><a href="${isIndexPage ? '#about' : 'index.html#about'}" 
                     ${this.isSectionActive('about')}>About</a></li>
                 <li><a href="${isIndexPage ? '#skills' : 'index.html#skills'}" 
