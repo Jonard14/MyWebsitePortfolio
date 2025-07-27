@@ -38,6 +38,28 @@
   }
 }
 
+/* Link Underline */
+.nav-links a.active {
+  color: var(--primary-color) !important;
+  font-weight: bold !important;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+/* Remove default link underline if present */
+.nav-links a {
+  text-decoration: none;
+}
+
 /* Overlay when menu is open */
 .menu-overlay {
   display: none;
