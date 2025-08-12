@@ -12,7 +12,7 @@
 - **Contact Form**: With email integration
 - **Performance Optimized**: Fast loading with lazy loading
 
-## 🛠 Technologies Used
+## 🛠 Tools Used
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Hosting**: Vercel
