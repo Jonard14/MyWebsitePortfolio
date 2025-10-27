@@ -90,3 +90,42 @@ if (hero) {
     hero.style.opacity = '1';
     hero.style.transform = 'translateY(0)';
 }
+
+
+
+// Certificate functionality
+document.addEventListener('DOMContentLoaded', function () {
+  // Open local files or external URLs when cert links are clicked
+  document.querySelectorAll('.cert-link').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      const file = this.dataset.file;
+      const url = this.dataset.url;
+      if (url) {
+        // external link (Credly etc.)
+        window.open(url, '_blank', 'noopener');
+      } else if (file) {
+        // local file path relative to site root or repo folder
+        // open in new tab so PDF or image can be displayed
+        window.open(file, '_blank', 'noopener');
+      }
+    });
+  });
+
+  // Toggle sub-cert lists (expanded breakdown)
+  document.querySelectorAll('.toggle-sub').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      const container = this.closest('.cert-card').querySelector('.sub-certs');
+      if (!container) return;
+      if (expanded) {
+        container.style.display = 'none';
+        this.textContent = 'Show topics ▾';
+      } else {
+        container.style.display = 'block';
+        this.textContent = 'Hide topics ▴';
+      }
+    });
+  });
+});

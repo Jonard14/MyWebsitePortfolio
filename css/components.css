@@ -251,6 +251,69 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+.cert-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.cert-link, .toggle-sub {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35em 0.85em;
+    border-radius: 4px;
+    border: none;
+    background: #f5f7fa;
+    color: #1a237e;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(26,35,126,0.06);
+}
+
+.cert-link:hover, .toggle-sub:hover {
+    background: #e3e7f7;
+    color: #3949ab;
+    text-decoration: underline;
+}
+
+.cert-link::before {
+    content: "🔗";
+    margin-right: 0.4em;
+    font-size: 1em;
+}
+
+.toggle-sub::before {
+    content: "📂";
+    margin-right: 0.4em;
+    font-size: 1em;
+}
+
+.sub-certs {
+    background: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #e3e7f7;
+    padding: 0.75em 1em;
+    margin-top: 0.5em;
+    box-shadow: 0 1px 4px rgba(26,35,126,0.04);
+}
+
+.sub-certs ul {
+    margin: 0;
+    padding-left: 1.2em;
+}
+
+.sub-certs li {
+    margin-bottom: 0.35em;
+}
+
+.sub-certs .cert-link {
+    font-size: 0.97em;
+    padding: 0.25em 0.65em;
+}
+
 /* Navigation */
 nav {
     position: fixed;
