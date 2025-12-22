@@ -1,3 +1,12 @@
+- **Certifications (Others)**
+
+|No  | Name     | Host        | Date Held      | Received Cert  |
+|:--:|:--------:|:-----------:|:--------------:|:--------------:|
+|1   | "Basic Occupational Safety and Health (BOSH) For SO1" | Luntiang Dahon Consultancy & Engineering Services (LDCES) - DOLE Accreditation No. 1030-100325-0190 | 2025-12-09 | Yes |
+
+
+- **Seminar/Workshops**
+
 |No  | Name     | Host        | Date Held      | Received Cert  |
 |:--:|:--------:|:-----------:|:--------------:|:--------------:|
 |1   | “Why a Blockchain Career is in-demand & how we can help you start one” | Mapúa Malayan Colleges Laguna/Metacrafters x iPeople | 2023-02-14 | No |
@@ -15,6 +24,6 @@
 |13  | “Applied Data Science: From Raw Data to Real Insights” Workshop - Exploratory Analysis & Visualization | SET Certification | 2025-07-12 | Yes |
 |14  | “Applied Data Science: From Raw Data to Real Insights” Workshop - Predictive Modeling & Machine Learning | SET Certification | 2025-07-19 | Yes |
 |15  | “Applied Data Science: From Raw Data to Real Insights” Workshop - Model Evaluation & Business Impact | SET Certification | 2025-07-26 | Yes |
-|no  | name | host | date | Yes/No |
+
 
 |no  | name | host | date | Yes/No |
